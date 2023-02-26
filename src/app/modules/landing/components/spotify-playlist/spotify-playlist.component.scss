@@ -1,0 +1,63 @@
+.direction {
+    display: inline-block;
+    padding-left: 20px;
+}
+
+.song-card {
+    height: 250px;
+    width: 210px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #171717;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.song-card:hover {
+    height: 250px;
+    width: 210px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #202020;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.img-overlay {
+    display: none;
+}
+
+.img-overlay:hover {
+    width: 38px;
+    height: 38px;
+    cursor: pointer;
+}
+
+.song-card:hover .img-overlay {
+    display: block;
+    position: absolute;
+    margin-top: 110px;
+    margin-left: 110px;
+}
+
+.card-title {
+    color: white;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 1px;
+}
+
+.card-desc {
+    color: gray;
+    font-weight: 500;
+    margin: 2px;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-size: 15px;
+}

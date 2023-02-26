@@ -1,0 +1,114 @@
+<div class="home-container row">
+  <div class="side-bar">
+    <div class="side-bar-item p-2">
+      <img
+        width="132"
+        class="m-3 text-left"
+        src="assets/spotify_light.png"
+        alt="spotify light logo"
+      />
+    </div>
+    <div class="side-bar-item">
+      <mat-icon class="side-bar-icon" routerLink="/home">home</mat-icon>
+      <button class="side-bar-button" routerLink="/home">Home</button>
+    </div>
+    <div class="side-bar-item">
+      <mat-icon class="side-bar-icon" routerLink="/search">search</mat-icon>
+      <button class="side-bar-button" routerLink="/search">Search</button>
+    </div>
+    <div class="side-bar-item mb-4">
+      <mat-icon class="side-bar-icon">library_music</mat-icon>
+      <button class="side-bar-button">Your Library</button>
+    </div>
+    <div class="side-bar-item">
+      <mat-icon class="side-bar-icon">add_box</mat-icon>
+      <button class="side-bar-button">Create Playlist</button>
+    </div>
+    <div class="side-bar-item">
+      <mat-icon class="side-bar-icon">favorite</mat-icon>
+      <button class="side-bar-button">Liked Songs</button>
+    </div>
+  </div>
+  <div class="playlist-container">
+    <div class="row top-nav">
+      <app-top-nav
+        (searchTextChanged)="onSearchTextEntered($event)"
+      ></app-top-nav>
+    </div>
+    <div class="row focus-page" *ngIf="searchText === ''">
+      <div>
+        <p><a class="body-title">Browse all</a></p>
+      </div>
+      <div>
+        <app-collections></app-collections>
+      </div>
+    </div>
+    <div class="row focus-page" *ngIf="searchText != ''">
+      <div class="col-4">
+        <p><a class="body-title">Top Result</a></p>
+        <div class="song-card">
+          <img
+            class="p-0"
+            src="{{ tracks[0].album.images[0].url }}"
+            width="100"
+            height="100"
+          />
+          <p class="top-card-title">{{ tracks[0].name }}</p>
+          <p class="top-card-desc">{{ tracks[0].artists[0].name }}</p>
+        </div>
+      </div>
+      <div class="col-8 track-cards">
+        <p><a class="body-title">Songs</a></p>
+        <div *ngFor="let item of tracks">
+          <div class="row track-card">
+            <div class="col-1">
+              <img
+                class="p-0"
+                src="{{ item.album.images[0].url }}"
+                width="35"
+                height="35"
+              />
+            </div>
+            <div class="col-10">
+              <p class="card-title">{{ item.name }}</p>
+              <p class="card-desc">{{ item.artists[0].name }}</p>
+            </div>
+            <div class="col-1">
+              <p class="card-desc">{{ item.duration_ms | duration }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="playlist-page" *ngIf="artists != ''">
+      <p><a class="artist-title">Artists</a></p>
+      <div class="direction" *ngFor="let item of artists">
+        <div class="artist-card">
+          <img
+            class="p-0"
+            src="{{ item.images[0].url }}"
+            width="150"
+            height="150"
+          />
+          <p class="card-title">{{ item.name }}</p>
+          <p class="card-desc">Artist</p>
+        </div>
+      </div>
+    </div>
+    <div class="playlist-page" *ngIf="artists != ''">
+      <p><a class="artist-title">Playlists</a></p>
+      <div class="direction" *ngFor="let item of playlists">
+        <div class="artist-card">
+          <img
+            class="p-0"
+            src="{{ item.images[0].url }}"
+            width="150"
+            height="150"
+          />
+          <p class="card-title">{{ item.name }}</p>
+          <p class="card-desc">{{ item.owner.display_name }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

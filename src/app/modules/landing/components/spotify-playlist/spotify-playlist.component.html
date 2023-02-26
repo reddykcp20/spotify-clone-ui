@@ -1,0 +1,13 @@
+<div class="direction" *ngFor="let item of spotifyPlaylist">
+  <div class="song-card">
+    <img class="p-0" src="{{ item.img }}" width="150" height="150" />
+    <img
+      class="img-overlay"
+      src="https://cdn-icons-png.flaticon.com/512/1709/1709973.png"
+      width="40"
+      height="40"
+    />
+    <p class="card-title">{{ item.title }}</p>
+    <p class="card-desc">{{ item.desc }}</p>
+  </div>
+</div>

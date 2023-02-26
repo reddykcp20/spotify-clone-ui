@@ -1,0 +1,78 @@
+.direction {
+    display: inline-block;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+.song-card {
+    height: 165px;
+    width: 165px;
+    display: flex;
+    flex-direction: column;
+    // justify-content: flex-start;
+    border-radius: 12px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 0;
+    padding-bottom: 0;
+}
+
+.song-card:hover {
+    cursor: pointer;
+}
+
+.card-title {
+    color: white;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 1px;
+    font-size: 23px;
+}
+
+.img-rot {
+    transform: rotate(35deg);
+}
+
+.img-pos {
+    overflow-y: hidden;
+    padding-left: 70px;
+    padding-top: 35px;
+    padding-bottom: 0;
+    margin: 0;
+}
+
+.color-zero {
+    background-color: #e13300;
+}
+
+.color-one {
+    background-color: #1e3264;
+}
+
+.color-two {
+    background-color: #e8115b;
+}
+
+.color-three {
+    background-color: #e91429;
+}
+
+.color-four {
+    background-color: #b02897;
+}
+
+.color-five {
+    background-color: #a56752;
+}
+
+.color-six {
+    background-color: #8d67ab;
+}
+
+.color-seven {
+    background-color: #7358ff;
+}
+
+.color-eight {
+    background-color: #e1118c;
+}

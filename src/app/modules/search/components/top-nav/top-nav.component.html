@@ -1,0 +1,45 @@
+<div class="top-nav">
+  <div class="nav-arrows-loggedin">
+    <!-- matTooltip="Go back"
+    matTooltipClass="tooltip" -->
+    <mat-icon class="nav-arrows-border">keyboard_arrow_left</mat-icon>
+    <mat-icon class="nav-arrows-border">keyboard_arrow_right</mat-icon>
+    <div>
+      <mat-icon class="search-icon">search</mat-icon>
+      <input
+        class="search-field"
+        placeholder="What do you want to listen to?"
+        [(ngModel)]="searchValue"
+        (input)="onSearchTextChanged()"
+      />
+    </div>
+  </div>
+  <div class="auth">
+    <!-- <div class="auth-name">{{ name }}</div>
+    <div><button class="auth-login" (click)="onLogout()">Logout</button></div> -->
+    <div>
+      <button class="exp-pre-btn">Explore Premium</button>
+    </div>
+    <div>
+      <div class="menu" [matMenuTriggerFor]="belowMenu">
+        <button class="btn-menu" mat-button>
+          {{ name ? name : "Chandhu" }}
+        </button>
+        <mat-icon class="arrow">arrow_drop_down</mat-icon>
+      </div>
+      <mat-menu class="menu-pane" #belowMenu="matMenu" yPosition="below">
+        <button mat-menu-item><p class="menu-pane-item">Account</p></button>
+        <button mat-menu-item><p class="menu-pane-item">Profile</p></button>
+        <button mat-menu-item>
+          <p class="menu-pane-item">Upgrade to Premium</p>
+        </button>
+        <button mat-menu-item><p class="menu-pane-item">Support</p></button>
+        <button mat-menu-item><p class="menu-pane-item">Download</p></button>
+        <button mat-menu-item><p class="menu-pane-item">Settings</p></button>
+        <button mat-menu-item (click)="onLogout()">
+          <p class="menu-pane-item">Log out</p>
+        </button>
+      </mat-menu>
+    </div>
+  </div>
+</div>

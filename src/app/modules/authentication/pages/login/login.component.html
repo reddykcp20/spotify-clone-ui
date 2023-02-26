@@ -1,0 +1,54 @@
+<div class="login-container">
+  <div>
+    <img width="250px" src="assets/spotify_green.png" alt="" />
+  </div>
+  <div>
+    <p class="mt-5 text mb-0">To continue, log in to spotify</p>
+  </div>
+  <div class="btn">
+    <div>
+      <button class="fb-btn">CONTINUE WITH FACEBOOK</button>
+    </div>
+    <div>
+      <button class="apple-btn">CONTINUE WITH APPLE</button>
+    </div>
+    <div>
+      <button class="google-btn">CONTINUE WITH GOOGLE</button>
+    </div>
+    <div>
+      <button class="phone-btn">CONTINUE WITH PHONE NUMBER</button>
+    </div>
+  </div>
+  <div class="row">
+    <p class="or-divider">OR</p>
+  </div>
+  <div class="form-container">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div>
+        <p class="mb-2 text">Email address or username</p>
+        <mat-form-field class="width" appearance="outline">
+          <mat-label>Email address or username</mat-label>
+          <input matInput formControlName="email" />
+        </mat-form-field>
+
+        <p class="mb-2 text">Password</p>
+        <mat-form-field class="width" appearance="outline">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" formControlName="password" />
+        </mat-form-field>
+
+        <p class="forgot-pass">Forgot your password?</p>
+
+        <div class="rem-container">
+          <span>
+            <div class="rem-container">
+              <input class="text" type="checkbox" checked />
+              <p class="text p-2 m-0">Remember me</p>
+            </div>
+          </span>
+          <button class="btn-login">LOG IN</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

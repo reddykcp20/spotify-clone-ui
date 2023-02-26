@@ -1,0 +1,21 @@
+<div class="direction" *ngFor="let item of browseCol; let i = index">
+  <div
+    class="song-card"
+    [ngClass]="{
+      'color-zero': i % 9 === 0,
+      'color-one': i % 9 === 1,
+      'color-two': i % 9 === 2,
+      'color-three': i % 9 === 3,
+      'color-four': i % 9 === 4,
+      'color-five': i % 9 === 5,
+      'color-six': i % 9 === 6,
+      'color-seven': i % 9 === 7,
+      'color-eight': i % 9 === 8
+    }"
+  >
+    <p class="card-title">{{ item.name }}</p>
+    <div class="img-pos">
+      <img class="img-rot" src="{{ item.img }}" width="70" height="70" />
+    </div>
+  </div>
+</div>

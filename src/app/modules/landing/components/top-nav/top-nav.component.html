@@ -1,0 +1,21 @@
+<div class="top-nav">
+  <div class="nav-arrows">
+    <!-- matTooltip="Go back"
+    matTooltipClass="tooltip" -->
+    <mat-icon class="nav-arrows-border">keyboard_arrow_left</mat-icon>
+    <mat-icon class="nav-arrows-border">keyboard_arrow_right</mat-icon>
+  </div>
+  <div class="auth">
+    <!-- <div *ngIf="auth != 'true'" class="auth"> -->
+    <div class="auth-premium">Premium</div>
+    <div class="auth-support">Support</div>
+    <div class="auth-download">Download</div>
+    <div class="auth-vbar"></div>
+    <div class="auth-signup">Signup</div>
+    <div><button class="auth-login" (click)="onLogIn()">Log In</button></div>
+  </div>
+  <!-- <div *ngIf="auth === 'true'" class="auth">
+      <div class="auth-name">{{ name }}</div>
+      <div><button class="auth-login" (click)="onLogout()">Logout</button></div>
+    </div> -->
+</div>

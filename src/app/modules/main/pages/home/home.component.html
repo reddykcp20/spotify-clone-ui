@@ -1,0 +1,53 @@
+<div class="home-container row">
+  <div class="side-bar">
+    <div class="side-bar-item p-2">
+      <img
+        width="132"
+        class="m-3 text-left"
+        src="assets/spotify_light.png"
+        alt="spotify light logo"
+      />
+    </div>
+    <div class="side-bar-item">
+      <mat-icon class="side-bar-icon" routerLink="/home">home</mat-icon>
+      <button class="side-bar-button" routerLink="/home">Home</button>
+    </div>
+    <div class="side-bar-item">
+      <mat-icon class="side-bar-icon" routerLink="/search">search</mat-icon>
+      <button class="side-bar-button" routerLink="/search">Search</button>
+    </div>
+    <div class="side-bar-item mb-4">
+      <mat-icon class="side-bar-icon">library_music</mat-icon>
+      <button class="side-bar-button">Your Library</button>
+    </div>
+    <div class="side-bar-item">
+      <mat-icon class="side-bar-icon">add_box</mat-icon>
+      <button class="side-bar-button">Create Playlist</button>
+    </div>
+    <div class="side-bar-item">
+      <mat-icon class="side-bar-icon">favorite</mat-icon>
+      <button class="side-bar-button">Liked Songs</button>
+    </div>
+  </div>
+  <div class="playlist-container">
+    <div class="row top-nav">
+      <app-top-nav></app-top-nav>
+    </div>
+    <div *ngFor="let item of playlists; let i = index">
+      <div
+        [ngClass]="{ 'row focus-page': i === 0, 'row playlist-page': i > 0 }"
+      >
+        <div>
+          <p>
+            <a class="body-title">{{ item.name }}</a>
+          </p>
+        </div>
+        <div>
+          <app-recently-played *ngIf="i === 0"></app-recently-played>
+          <app-romance-songs *ngIf="i === 1"></app-romance-songs>
+          <app-mass-songs *ngIf="i === 2"></app-mass-songs>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

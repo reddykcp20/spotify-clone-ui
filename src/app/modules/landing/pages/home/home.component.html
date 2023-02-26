@@ -1,0 +1,53 @@
+<div class="home-container row">
+  <div class="side-bar col-2">
+    <div class="side-bar-item p-2">
+      <img
+        width="132"
+        class="m-3 text-left"
+        src="assets/spotify_light.png"
+        alt="spotify light logo"
+      />
+    </div>
+    <div class="side-bar-item">
+      <mat-icon class="side-bar-icon">home</mat-icon>
+      <a>Home</a>
+    </div>
+    <div class="side-bar-item">
+      <mat-icon class="side-bar-icon">search</mat-icon>
+      <a>Search</a>
+    </div>
+    <div class="side-bar-item mb-4">
+      <mat-icon class="side-bar-icon">library_music</mat-icon>
+      <a>Your Library</a>
+    </div>
+    <div class="side-bar-item">
+      <mat-icon class="side-bar-icon">add_box</mat-icon>
+      <a>Create Playlist</a>
+    </div>
+    <div class="side-bar-item">
+      <mat-icon class="side-bar-icon">favorite</mat-icon>
+      <a>Liked Songs</a>
+    </div>
+  </div>
+  <div class="playlist-container col-10">
+    <div class="row">
+      <app-top-nav></app-top-nav>
+    </div>
+    <div class="row focus-page">
+      <div>
+        <p><a class="body-title">Focus</a></p>
+      </div>
+      <div class="row">
+        <app-focus-playlist></app-focus-playlist>
+      </div>
+    </div>
+    <div class="row playlist-page">
+      <div>
+        <p><a class="body-title">Spotify Playlists</a></p>
+      </div>
+      <div class="row">
+        <app-spotify-playlist></app-spotify-playlist>
+      </div>
+    </div>
+  </div>
+</div>
