@@ -109,6 +109,19 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+.song-card:hover .img-overlay {
+    display: block;
+    position: absolute;
+    margin-top: 110px;
+    margin-left: 280px;
+}
+
+.song-card:hover .img-overlay:hover {
+    width: 64px;
+    height: 64px;
+    cursor: pointer;
+}
+
 .card-title {
     color: white;
     font-weight: bold;
@@ -142,13 +155,7 @@
 }
 
 .track-card:hover {
-    height: 50px;
-    width: 100%;
-    align-items: center;
     background-color: #202020;
-    border-radius: 12px;
-    padding: 2px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .top-card-title {
@@ -204,4 +211,25 @@
     font-weight: bold;
     text-decoration: none;
     padding-left: 20px;
+}
+
+.artist-img {
+    border-radius: 50%;
+}
+
+.img-overlay {
+    display: none;
+}
+
+.img-overlay:hover {
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+}
+
+.artist-card:hover .img-overlay {
+    display: block;
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 90px;
 }
