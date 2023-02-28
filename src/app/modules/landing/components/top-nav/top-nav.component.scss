@@ -43,11 +43,12 @@
 }
 
 ::ng-deep .tooltip {
-    background-color: #282828;
+    background: #282828;
     color: #e8e8e8;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: bold;
-  }
+    overflow: hidden;
+}
 
 .auth {
     display: flex;
